@@ -22,6 +22,7 @@ Examples:
 		  e.g. {"player":"rock"}
   node-rps rock   Return JSON with results for RPS played against a simulated opponent.
 		  e.g {"player":"rock","opponent":"scissors","result":"win"}`);
+	process.exit(0);
 }
 
 if (args.r || args.rules) {
@@ -30,6 +31,7 @@ if (args.r || args.rules) {
   - Scissors CUTS Paper
   - Paper COVERS Rock
   - Rock CRUSHES Scissors`);
+  process.exit(0);
 }
 
 const valid = ["rock", "paper", "scissors"];
@@ -39,6 +41,7 @@ if (args._.length == 0) {
 }
 else if (args._.length == 1 && valid.includes(args._[0].toLowerCase())) {
 	var result = rps(args._[0].toLowerCase());
+	process.exit(1);
 }
 else {
 	console.error(args._[0] + " is out of range.");
