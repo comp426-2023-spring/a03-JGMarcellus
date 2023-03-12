@@ -2,7 +2,7 @@
 
 import { rps } from '../lib/rpsls.js';
 
-const minimist = require('minimist');
+const minimist = import('minimist');
 
 const args = minimist(process. argv.slice(2));
 
