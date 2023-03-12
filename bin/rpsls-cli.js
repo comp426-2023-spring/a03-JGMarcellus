@@ -39,15 +39,19 @@ if (args.r || args.rules) {
 }
 
 const valid = ["rock", "paper", "scissors", "lizard", "spock"];
+var result;
 
 if (args._.length == 0) {
-	var result = rps();
+	result = rps();
 }
 
 else if (args._.length == 1 && valid.includes(args._[0].toLowerCase())) {
-	var result = rps(args._[0].toLowerCase());
-	process.exit(1);
+	result = rps(args._[0].toLowerCase());
 }
 else {
 	console.error(args._[0] + " is out of range.");
+	process.exit(1);
 }
+
+
+print(result)

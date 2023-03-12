@@ -6,9 +6,6 @@ const minimist = require('minimist');
 
 const args = minimist(process. argv.slice(2));
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
 
 if (args.h || args.help) {
 	console.log(`Usage: node-rps [SHOT]
@@ -45,4 +42,7 @@ else if (args._.length == 1 && valid.includes(args._[0].toLowerCase())) {
 }
 else {
 	console.error(args._[0] + " is out of range.");
+	process.exit(1);
 }
+
+print(result)
