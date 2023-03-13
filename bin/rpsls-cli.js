@@ -42,11 +42,11 @@ const valid = ["rock", "paper", "scissors", "lizard", "spock"];
 var result;
 
 if (args._.length == 0) {
-	result = rps();
+	result = rpsls();
 }
 
 else if (args._.length == 1 && valid.includes(args._[0].toLowerCase())) {
-	result = rps(args._[0].toLowerCase());
+	result = rpsls(args._[0].toLowerCase());
 }
 else {
 	console.error(args._[0] + " is out of range.");
