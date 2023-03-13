@@ -44,4 +44,4 @@ else {
 	process.exit(1);
 }
 
-print(result)
+console.log(result);
