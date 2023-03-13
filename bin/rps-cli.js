@@ -37,7 +37,6 @@ if (args._.length == 0) {
 }
 else if (args._.length == 1 && valid.includes(args._[0].toLowerCase())) {
 	var result = rps(args._[0].toLowerCase());
-	process.exit(1);
 }
 else {
 	console.error(args._[0] + " is out of range.");
